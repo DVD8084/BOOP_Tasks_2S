@@ -189,13 +189,13 @@ TEST(StdTest, DiceStackStdTest) {
     StackTestBase(arr, i, 5);
 }
 
-TEST(ArrayTest, VectorStringQueueStdTest) {
+TEST(StdTest, VectorStringQueueStdTest) {
     QueueStd <std::vector<std::string> > arr;
     std::vector<std::string> i;
     QueueTestBase(arr, i, 5);
 }
 
-TEST(ArrayTest, VectorVectorCharDequeStdTest) {
+TEST(StdTest, VectorVectorCharDequeStdTest) {
     DequeStd <std::vector<std::vector<char> > > arr;
     std::vector<std::vector<char> > i;
     DequeTestBase(arr, i, 3);
