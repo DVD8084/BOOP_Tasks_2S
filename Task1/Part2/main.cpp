@@ -6,6 +6,7 @@
 #include "random.h"
 #include "std.h"
 #include "test.h"
+#include "gtest/gtest.h"
 
 int main(int argc, char** argv)
 {
@@ -14,8 +15,10 @@ int main(int argc, char** argv)
      * STACK, QUEUE, DEQUE for the second argument;
      * ARRAY, LIST, STDLIB for the third argument.
      */
-    char type;
-    structure_test(type, QUEUE, LIST);
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+    //char type;
+    //structure_test(type, QUEUE, LIST);
     //dice_test();
     return 0;
 }

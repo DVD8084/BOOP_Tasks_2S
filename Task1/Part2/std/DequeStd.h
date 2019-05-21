@@ -2,6 +2,7 @@
 #define DEQUESTD_H
 
 #include <deque>
+#include "../base/Deque.h"
 
 using std::deque;
 
@@ -9,7 +10,7 @@ using std::deque;
  *  @brief  Deque (double-ended queue) based on std::deque.
  */
 template <typename T>
-class DequeStd {
+class DequeStd : public Deque<T> {
 private:
     deque<T> std_deque;
 public:

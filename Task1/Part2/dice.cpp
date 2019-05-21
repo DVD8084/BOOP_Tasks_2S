@@ -191,3 +191,7 @@ void print_probabilities(vector <Dice> dice_set)
     }
     return;
 }
+
+bool operator==(const Dice& lhs, const Dice& rhs) {
+    return (lhs.sides == rhs.sides) && (lhs.probabilities == rhs.probabilities);
+}

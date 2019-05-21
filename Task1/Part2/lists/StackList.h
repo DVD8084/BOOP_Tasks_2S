@@ -1,17 +1,17 @@
 #ifndef STACKLIST_H
 #define STACKLIST_H
 
-#include "List.h"
+#include "structural/List.h"
+#include "../base/Stack.h"
 
 /**
  *  @brief  Stack based on linked lists.
  */
 template <typename T>
-class StackList : public List<T>
-{
+class StackList : public List<T>, public Stack<T> {
 public:
     StackList();
-    StackList(T data);
+    explicit StackList(T data);
     void print();
     int push(T new_data);
     T peek();

@@ -1,17 +1,17 @@
 #ifndef DEQUELIST_H
 #define DEQUELIST_H
 
-#include "DoubleList.h"
+#include "structural/DoubleList.h"
+#include "../base/Deque.h"
 
 /**
  *  @brief  Deque (double-ended queue) based on linked lists.
  */
 template <typename T>
-class DequeList : public DoubleList<T>
-{
+class DequeList : public DoubleList<T>, public Deque<T> {
 public:
     DequeList();
-    DequeList(T data);
+    explicit DequeList(T data);
     void print();
     void print_rev();
     int push_start(T new_data);

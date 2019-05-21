@@ -13,7 +13,7 @@ void dice_test()
     vector <Dice> dice_set;
     for (int i = 0; i < 2; i++)
     {
-        dice_set.push_back(Dice(6));
+        dice_set.emplace_back(6);
     }
     vector <double> probabilities;
     for (int i = 0; i < 2; i++)
@@ -23,7 +23,7 @@ void dice_test()
     vector <Dice> coin_set;
     for (int i = 0; i < 3; i++)
     {
-        coin_set.push_back(Dice(2, probabilities));
+        coin_set.emplace_back(2, probabilities);
     }
     cout << "[SET 1: 2 REGULAR DICE]\n";
     print_probabilities(dice_set);

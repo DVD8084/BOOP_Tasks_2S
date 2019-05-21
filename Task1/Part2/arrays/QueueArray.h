@@ -5,18 +5,19 @@
 #define MAX_ARRAY_SIZE 100
 #endif
 
+#include "../base/Queue.h"
+
 /**
  *  @brief  Queue based on arrays.
  */
 template <typename T>
-class QueueArray
-{
+class QueueArray : public Queue<T> {
 private:
     T queue[MAX_ARRAY_SIZE];
     int queue_start = 0, queue_size = 0;
 public:
     QueueArray();
-    QueueArray(T data);
+    explicit QueueArray(T data);
     void print();
     int push(T new_data);
     T peek();

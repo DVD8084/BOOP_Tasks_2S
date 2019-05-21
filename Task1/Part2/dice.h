@@ -26,7 +26,10 @@ public:
     Dice(int sides, vector<double> probabilities);
     int side_amount();
     double probability(int i);
+
+    friend bool operator==(const Dice& lhs, const Dice& rhs);
 };
+
 
 vector <vector <int> > get_roll_consequences(vector <Dice> dice_set);
 

@@ -5,18 +5,19 @@
 #define MAX_ARRAY_SIZE 100
 #endif
 
+#include "../base/Stack.h"
+
 /**
  *  @brief  Stack based on arrays.
  */
 template <typename T>
-class StackArray
-{
+class StackArray : public Stack<T> {
 private:
     T stack[MAX_ARRAY_SIZE];
     int stack_size = 0;
 public:
     StackArray();
-    StackArray(T data);
+    explicit StackArray(T data);
     void print();
     int push(T new_data);
     T peek();

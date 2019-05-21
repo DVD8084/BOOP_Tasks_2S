@@ -5,18 +5,19 @@
 #define MAX_ARRAY_SIZE 100
 #endif
 
+#include "../base/Deque.h"
+
 /**
  *  @brief  Deque (double-ended queue) based on arrays.
  */
 template <typename T>
-class DequeArray
-{
+class DequeArray : public Deque<T> {
 private:
     T deque[MAX_ARRAY_SIZE];
     int deque_start = 0, deque_size = 0;
 public:
     DequeArray();
-    DequeArray(T data);
+    explicit DequeArray(T data);
     void print();
     void print_rev();
     int push_start(T new_data);

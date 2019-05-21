@@ -2,6 +2,7 @@
 #define QUEUESTD_H
 
 #include <queue>
+#include "../base/Queue.h"
 
 using std::queue;
 
@@ -9,12 +10,12 @@ using std::queue;
  *  @brief  Queue based on std::queue.
  */
 template <typename T>
-class QueueStd {
+class QueueStd  : public Queue<T> {
 private:
     queue<T> std_queue;
 public:
     QueueStd();
-    QueueStd(T data);
+    explicit QueueStd(T data);
     void print();
     int push(T new_data);
     T peek();

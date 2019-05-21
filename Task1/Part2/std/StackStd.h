@@ -2,6 +2,7 @@
 #define STACKSTD_H
 
 #include <stack>
+#include "../base/Stack.h"
 
 using std::stack;
 
@@ -9,12 +10,12 @@ using std::stack;
  *  @brief  Stack based on std::stack.
  */
 template <typename T>
-class StackStd {
+class StackStd : public Stack<T> {
 private:
     stack<T> std_stack;
 public:
     StackStd();
-    StackStd(T data);
+    explicit StackStd(T data);
     void print();
     int push(T new_data);
     T peek();
